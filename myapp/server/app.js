@@ -10,11 +10,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-
-
-
-
-
+// 跨域问题
 app.all('*', function(req, res, next) {  
   res.header("Access-Control-Allow-Origin", "*");  
   res.header("Access-Control-Allow-Headers", "X-Requested-With");  
@@ -25,10 +21,6 @@ app.all('*', function(req, res, next) {
 });  
 
 app.use(cors());
-
-
-
-
 
 
 // view engine setup
